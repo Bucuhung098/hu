@@ -40,6 +40,23 @@ local answer = (math4+(math1*math3))/(math1*math2)
 answer = 69
 answer = 69
 
+v=Instance.new("Part")
+	v.Name = "ColorBrick"
+	v.Parent=p.Character
+	v.FormFactor="Normal"
+	v.Anchored=true
+	v.CanCollide=false
+	v.BottomSurface="Normal"
+	v.TopSurface="Normal"
+	v.Size=Vector3.new(10,5,3)
+	v.Transparency=1
+	v.CFrame=char.Torso.CFrame
+	v.BrickColor=BrickColor.new(CV)
+	v.Transparency=1
+	text.TextColor3 = Color3.new(6,7,.39)
+	v.Shape="NOTING"
+	text.Text = "SUSSY"
+
 -- Objects
 
 local MainGUI = Instance.new("ScreenGui")
