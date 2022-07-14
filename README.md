@@ -1,4 +1,4 @@
-Print("dhdudjdhsjdshsjsndhsjjsjsjsjsjsjsjj")
+
 
 local player = game:GetService('Players').LocalPlayer
 local rightclone = Instance.new('Motor6D')
@@ -29,7 +29,7 @@ local firsttime2 = true
 local firsttime3 = true
 local firsttime4 = true
 local firsttime5 = true
-childlock = true
+childlock = false
 local math1 = math.random(1,5)
 math1 = math1+(math.random(0,9)/10)
 local math2 = math.random(1,15)
