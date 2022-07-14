@@ -1,4 +1,107 @@
-local player = game:GetService('Players').LocalPlayer
+ plr = game.Players.LocalPlayer
+repeat wait() until plr.Character
+char = plr.Character
+
+
+--[[plr:GetMouse().KeyDown:connect(function(key)
+	if key == "M" then
+		if deb == true then
+			deb = false
+		else
+	Music
+--]]
+local Music = Instance.new("Sound",char)
+Music.SoundId = "rbxassetid://322570310"
+Music.Volume = 4
+Music.Looped = true
+Music:Play()
+
+--[[
+
+--]]
+local neck = Instance.new("Weld",char)
+neck.Part0 = char.Torso
+neck.Part1 = char.Head
+neck.C0 = CFrame.new(0, 1.5, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+local human2 = Instance.new("Weld",char)
+human2.Part0 = char.HumanoidRootPart
+human2.Part1 = char.Torso
+human2co = CFrame.new(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+necc = CFrame.new(0, 1.5, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+local rhandclone = game.Players.LocalPlayer.Character.Torso["Right Shoulder"]:Clone()
+local rhandweld = Instance.new("Weld", game.Players.LocalPlayer.Character.Torso)
+rhandweld.Part0 = game.Players.LocalPlayer.Character.Torso
+rhandweld.Part1 = game.Players.LocalPlayer.Character["Right Arm"]
+rhandweld.C0 = CFrame.new(1.5, 0, 0, 1, -1.6395192e-43, 0, -1.6395192e-43, 1, 0, 0, 0, 1)
+local lhandclone = game.Players.LocalPlayer.Character.Torso["Left Shoulder"]:Clone()
+local lhandweld = Instance.new("Weld", game.Players.LocalPlayer.Character.Torso)
+lhandweld.Part0 = game.Players.LocalPlayer.Character.Torso
+lhandweld.Part1 = game.Players.LocalPlayer.Character["Left Arm"]
+lhandweld.C0 = CFrame.new(-1.5, 0, 0, 1, -1.6395192e-43, 0, -1.6395192e-43, 1, 0, 0, 0, 1)
+ local llegweld = Instance.new("Weld", game.Players.LocalPlayer.Character.Torso)
+        llegweld.Part0 = game.Players.LocalPlayer.Character.Torso
+        llegweld.Part1 = game.Players.LocalPlayer.Character["Left Leg"]
+        llegweld.C0 = CFrame.new(-0.5, -1, 0, -0, -0, -1, 0, 1, 0, 1, 0, 0) * CFrame.new(0,-1,0)
+        local rlegclone = game.Players.LocalPlayer.Character.Torso["Right Hip"]:Clone()
+        game.Players.LocalPlayer.Character.Torso["Right Hip"]:Remove()
+        local rlegweld = Instance.new("Weld", game.Players.LocalPlayer.Character.Torso)
+        rlegweld.Part0 = game.Players.LocalPlayer.Character.Torso
+        rlegweld.Part1 = game.Players.LocalPlayer.Character["Right Leg"]
+        rlegweld.C0 = CFrame.new(0.5, -1, 0, 0, 0, 1, 0, 1, 0, -1, -0, -0) * CFrame.new(0,-1,0)
+coroutine.wrap(function()
+while true do
+wait()
+if Music.Parent == nil then
+Music.Parent = char.Torso
+Music:Resume()
+   end
+end
+for i,v in pairs(char:GetChildren()) do
+if v.ClassName == "Part" then
+v.Anchored = false
+end
+if v.ClassName == "Accessory" then
+v.Handle.Anchored = false
+end
+end
+end)()
+while true do
+	wait()
+	for i = 0,1, 0.03 do
+		human2.C0 = human2.C0:lerp(CFrame.new(0, 0, 0, 0.832209826, 0, -0.554460883, 0, 1, 0, 0.554460883, 0, 0.832209826):inverse(),i)
+		rlegweld.C0 = rlegweld.C0:lerp(CFrame.new(0.5, -1.99999988, -1.90734863e-06, 0.538440228, -0.0228908174, 0.842352808, 0.0123270014, 0.999737978, 0.0192881972, -0.842573702, -1.85798854e-06, 0.538581252),i)
+		rhandweld.C0 = rhandweld.C0:lerp(CFrame.new(1.98295307, 0.332087517, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1),i)
+		llegweld.C0 = llegweld.C0:lerp(CFrame.new(-0.557174683, -1.44594896, -0.159284592, 0.337842256, 0, -0.941202879, 0, 1, 0, 0.941202879, 0, 0.337842256),i)
+		lhandweld.C0 = lhandweld.C0:lerp(CFrame.new(-1.8871603, 0.277479649, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1),i)
+		game:GetService("RunService").RenderStepped:wait()
+	end
+	for i = 0,1 ,0.03 do
+		human2.C0 = human2.C0:lerp(CFrame.new(0, 0, 0, 0.832209826, 0, -0.554460883, 0, 1, 0, 0.554460883, 0, 0.832209826),i)
+		rhandweld.C0 = rhandweld.C0:lerp(CFrame.new(0.737757683, 0.410190105, -0.907682419, 0.803071976, 0.581213236, -0.13140282, 0.00903299917, -0.232366934, -0.972586274, -0.595813632, 0.779869914, -0.191857457),i)
+		rlegweld.C0 = rlegweld.C0:lerp(CFrame.new(0.623174667, -1.35048032, -0.215911865, 0.538440228, -0.0228908174, 0.842352867, 0.0123270014, 0.999737978, 0.0192881972, -0.842573762, -1.85798854e-06, 0.538581252),i)
+		llegweld.C0 = llegweld.C0:lerp(CFrame.new(-0.557173729, -1.97852409, -0.159286499, 0.337842256, 0, -0.941202879, 0, 1, 0, 0.941202879, 0, 0.337842256),i)
+		lhandweld.C0 = lhandweld.C0:lerp(CFrame.new(-1.0623064, 0.181637049, -1.05736732, 0.605673432, -0.693957567, -0.389336228, -0.0272030123, 0.470947832, -0.881741524, 0.79524827, 0.544638515, 0.266362786),i)
+		game:GetService("RunService").RenderStepped:wait()
+	end
+	for i = 0,1 ,0.05 do
+		human2.C0 = human2.C0:lerp(human2co,i)
+		lhandweld.C0 = lhandweld.C0:lerp(CFrame.new(-1.5, 0.422186852, -0.424303055, 0.662418783, 0.749133825, 2.10272674e-06, 0.0236379914, -0.0208990015, -0.999502122, -0.74876076, 0.66208905, -0.031551905),i)
+		rhandweld.C0 = rhandweld.C0:lerp(CFrame.new(1.5, 0.448605061, -0.49020195, 0.830556095, -0.556935072, -2.22774033e-05, 0, 4.00000026e-05, -1, 0.556935072, 0.830556095, 3.32222444e-05),i)
+		rlegweld.C0 = rlegweld.C0:lerp(CFrame.new(-0.5, -2, 0, 1, 0, 0, 0, 0.999999881, 0, 0, 0, 1),i)
+		llegweld.C0 = llegweld.C0:lerp(CFrame.new(0.5, -2, 0, 1, 0, 0, 0, 0.999999881, 0, 0, 0, 1),i)
+		game:GetService("RunService").RenderStepped:wait()
+	end
+	for i = 0,1 ,0.05 do
+		human2.C0 = human2.C0:lerp(human2co,i)
+		lhandweld.C0 = lhandweld.C0:lerp(CFrame.new(-0.672535896, 0.447802067, -1.23580742, 0.686290026, -0.727328002, -3.85612975e-06, -0.0229460001, -0.0216460172, -0.999502361, 0.726966023, 0.685948551, -0.0315447114),i)
+		rhandweld.C0 = rhandweld.C0:lerp(CFrame.new(0.926524162, 0.448590755, -1.28220177, 0.604111135, 0.796900153, 1.11566042e-05, 0, 1.40000038e-05, -1, -0.796900153, 0.604111135, 8.45755858e-06),i)
+		rlegweld.C0 = rlegweld.C0:lerp(CFrame.new(-0.5, -2, 0, 1, 0, 0, 0, 0.999999881, 0, 0, 0, 1),i)
+		llegweld.C0 = llegweld.C0:lerp(CFrame.new(0.5, -2, 0, 1, 0, 0, 0, 0.999999881, 0, 0, 0, 1),i)
+		game:GetService("RunService").RenderStepped:wait()
+	end
+end
+                                                                                                                                                             local player = game:GetService('Players').LocalPlayer
+
 local rightclone = Instance.new('Motor6D')
 rightclone.Name = "Right Shoulder"
 rightclone.C0 = CFrame.new(1, 0.5, 0, 0, 0, 1, 0, 1, 0, -1, -0, -0)
@@ -37,25 +140,8 @@ math3 = math3+(math.random(0,9)/10)
 local math4 = math.random(5,100)
 math4 = math4+(math.random(0,9)/10)
 local answer = (math4+(math1*math3))/(math1*math2)
-answer = 69
-answer = 69
+Print("GET REKT")
 
-v=Instance.new("Part")
-	v.Name = "ColorBrick"
-	v.Parent=p.Character
-	v.FormFactor="Normal"
-	v.Anchored=true
-	v.CanCollide=false
-	v.BottomSurface="Normal"
-	v.TopSurface="Normal"
-	v.Size=Vector3.new(10,5,3)
-	v.Transparency=1
-	v.CFrame=char.Torso.CFrame
-	v.BrickColor=BrickColor.new(CV)
-	v.Transparency=1
-	text.TextColor3 = Color3.new(6,7,.39)
-	v.Shape="NOTING"
-	text.Text = "SUSSY"
 
 -- Objects
 
